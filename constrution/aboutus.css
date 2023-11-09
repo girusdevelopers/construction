@@ -9,6 +9,55 @@ body {
     --color2: #181818 ;
 }
 
+.swiper {
+  width: 80%;
+  margin: auto;
+}
+
+.main-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 20px 0;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.img-box {
+  flex: 1;
+}
+
+.main-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.main-mater {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.main-head {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.main-para {
+  font-size: 16px;
+  color: #555;
+}
+
+
+
+
+
+
+
+
 
 .nav-bar {
     width: 100%;
@@ -167,19 +216,52 @@ body {
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
 }
-.fotter {
-  
-  margin-top: 10px;
-  width: 100%;
-  display: flex;
-  justify-content:space-around;
-  gap: 30px;
-  padding: 10px 14px;
+
+.fot{
+  color: white;
+  font-weight: 400;
+
 }
-.fotter a{
-  color: black;
+.foo{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.fotter1{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.fotter1 a{
   text-decoration: none;
 }
+
+.fotter {
+  margin-top: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  padding: 10px 14px;
+  background:rgba(0,0,0,0.7) url("./images/footer.jpg");
+  width: 100vw;
+  height: 300px;
+background-position: bottom;
+background-blend-mode:darken;
+
+}
+.add{
+  color: white;
+  font-weight: 600;
+}
+.fotter1{
+  padding-top: 20px;
+
+}
+
+
+
 @media only screen and (max-width:720px){
 
   .fotter {
