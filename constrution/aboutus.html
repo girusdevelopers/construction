@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About us</title>
     <link rel="stylesheet" href="./aboutus.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
     <header>
@@ -101,6 +102,54 @@
         </p>
       </div>
 
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- Your content goes here -->
+            <div class="swiper-slide">
+                <div class="main-box">
+                    <div class="img-box">
+                        <img src="https://images.unsplash.com/photo-1550136513-548af4445338?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80" alt="Heading 1" class="main-img">
+                    </div>
+                    <div class="main-mater">
+                        <h1 class="main-head">
+                          Integrity
+                        </h1>
+                        <p class="main-para">We believe in honesty, transparency, and ethical practices in all our interactions with clients, employees, and partners.</p>
+                      
+                    </div>
+                </div>
+                <div class="main-box">
+                  <div class="img-box">
+                      <img src="https://images.unsplash.com/photo-1550136513-548af4445338?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80" alt="Heading 1" class="main-img">
+                  </div>
+                  <div class="main-mater">
+                      <h1 class="main-head">
+                        Integrity
+                      </h1>
+                      <p class="main-para">We believe in honesty, transparency, and ethical practices in all our interactions with clients, employees, and partners.</p>
+                    
+                  </div>
+              </div>
+              <div class="main-box">
+                <div class="img-box">
+                    <img src="https://images.unsplash.com/photo-1550136513-548af4445338?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80" alt="Heading 1" class="main-img">
+                </div>
+                <div class="main-mater">
+                    <h1 class="main-head">
+                      Integrity
+                    </h1>
+                    <p class="main-para">We believe in honesty, transparency, and ethical practices in all our interactions with clients, employees, and partners.</p>
+                  
+                </div>
+            </div>
+            </div>
+            <!-- Repeat the above structure for each slide -->
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+
       <div class="logo-box">
         <div class="logo-head">
             <h1 class="side-head">OUR CLIENTS</h1>
@@ -122,15 +171,15 @@
 
       </div>
       <div class="fotter">
-        <div>
+        <div class="foo">
           <img class="logo-footer" src="" alt="">
             <p class="fot">Yes We Group LLC is an IT development</p>
             <p class="fot">and IT consulting company offering</p>
             <p class="fot">a wide range of IT expertise and services.</p>
-
+  
             <p class="fot">© 2020 yeswegroup, All Rights Reserved.</p>
             
-
+  
         </div>
         <div class="fotter1">
           <a class="fot" href="./home.html"><p class="fot">Home</p></a>
@@ -145,15 +194,28 @@
             <p class="add">Address</p>
             <!-- <p>cedar..</p> -->
             <p class="fot" >Frist floor House no: 4-7-102/26.</p>
-
+  
              
             <p class="fot">NR Sai Enclave colony,Habsiguda</p>
           
             <p class="fot">Hyderabad - 500007</p>
-
+  
         </div>
       </div>
       
     <script src="./about.js"></script>
+   
+    <script>
+
+document.addEventListener("DOMContentLoaded", function () {
+            var mySwiper = new Swiper('.swiper-container', {
+                slidesPerView: 1,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        });
+    </script>
 </body>
 </html>

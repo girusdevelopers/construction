@@ -322,11 +322,7 @@ body {
   font-weight: 400;
 
 }
-.footer1 a{
-  color: white;
-  font-weight: 400;
 
-}
 .fotter {
   margin-top: 100px;
   width: 100%;
@@ -342,7 +338,7 @@ background-blend-mode:darken;
 
 }
 .fotter1{
-  margin-top: 20px;
+  padding-top: 20px;
 
 }
 .para{
