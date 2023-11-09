@@ -1,0 +1,443 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  --color1: #fff;
+  --color2: #181818;
+}
+.box-matter{
+  line-height: 1.5rem;
+}
+.box-side{
+  padding-left: 20px;
+}
+
+.nav-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  position: relative;
+  background-color: var(--color2);
+  padding: 12px 20px;
+}
+.logo img {
+  width: 40px;
+}
+.side{
+  font-size: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+.menu {
+  display: flex;
+}
+.menu li {
+  padding-left: 30px;
+}
+.menu li a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--color1);
+  text-align: center;
+  transition: 0.15s ease-in-out;
+  position: relative;
+  text-transform: uppercase;
+}
+.menu li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--color1);
+  transition: 0.15s ease-in-out;
+}
+.menu li a:hover:after {
+  width: 100%;
+}
+.open-menu,
+.close-menu {
+  position: absolute;
+  color: var(--color1);
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: none;
+}
+.open-menu {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+.close-menu {
+  top: 20px;
+  right: 20px;
+}
+#check {
+  display: none;
+}
+@media (max-width: 610px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 100;
+    background-color: var(--color2);
+    transition: all 0.2s ease-in-out;
+  }
+  .menu li {
+    margin-top: 40px;
+  }
+  .menu li a {
+    padding: 10px;
+  }
+  .open-menu,
+  .close-menu {
+    display: block;
+  }
+  #check:checked ~ .menu {
+    right: 0;
+  }
+}
+.tittle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 38px;
+  font-weight: 700;
+  padding: 20px;
+}
+.main-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.box {
+  border: 2px solid gray;
+  box-shadow: 2px 2px 5px 0px #d3cbcb;
+  width: 350px;
+  height: 500px;
+  padding: 25px;
+  border-radius: 8px;
+  position: relative;
+  animation-name: move;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-direction: calc(3s);
+  animation-timing-function: linear;
+}
+@keyframes move {
+  from {
+    top: 800px;
+  }
+  to {
+    top: 0px;
+  }
+}
+
+.blue {
+  color: blue;
+}
+.card {
+  width: 350px;
+  height: 550px;
+  border: 2px solid gray;
+  box-shadow: 2px 2px 5px 0px #d3cbcb;
+  border-radius: 15px;
+}
+.image {
+  width: 100%;
+  height: 300px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.card-tittle {
+  font-weight: 600;
+}
+.banner {
+  background-image: url("https://archello.com/thumbs/images/2019/12/07/Corporate-interior-design-of-Forrester-Singapore-done-by-Space-Matrix---Pantry-view.1575734876.3236.jpg?fit=crop&w=1920&h=1080");
+  width: 100%;
+  height: fit-content;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 100px;
+  background-color: rgba(20, 20, 20, 0.8);
+  background-position: center top;
+  background-blend-mode: multiply;
+  padding: 40px;
+}
+
+.banner-head {
+  color: white;
+  /* // padding: 20px; */
+  text-align: center;
+  /* margin-top: 100px; */
+  /* margin-left: 350px; */
+  font-size: 32px;
+  font-family: inter;
+  font-weight: 300;
+}
+.banners {
+  background-image: url("https://archello.com/thumbs/images/2019/12/07/Corporate-interior-design-of-Forrester-Singapore-done-by-Space-Matrix---Pantry-view.1575734876.3236.jpg?fit=crop&w=1920&h=1080");
+  width: 100%;
+  height: fit-content;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 100px;
+  background-color: rgba(20, 20, 20, 0.8);
+  background-position: center top;
+  background-blend-mode: multiply;
+  padding: 40px;
+}
+
+.banner-heads {
+  color: white;
+  /* // padding: 20px; */
+  text-align: center;
+  /* margin-top: 100px; */
+  /* margin-left: 350px; */
+  font-size: 38px;
+  
+  font-weight: 600;
+
+}
+
+.matters {
+  text-align: center;
+  
+  margin: auto;
+  max-width: 1024px;
+  line-height: 1.5rem;
+  color: #fff;
+}
+.matter {
+  text-align: center;
+  font-family: serif;
+  margin: auto;
+  max-width: 1024px;
+  line-height: 1.5rem;
+  color: #fff;
+}
+.gallery-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.gallery-item {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.gallery-image {
+  width: 400px;
+  height: 300px;
+  margin-top: 30px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.qwe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.our {
+  /* margin-left: 600px; */
+  width: 100%;
+  font-weight: 800;
+  font-size: 40px;
+  /* margin-top: 100px; */
+  text-align: center;
+  padding: 15px 0px;
+}
+.carousel{
+  margin-top: -17px;
+}
+
+.image-box {
+  display: flex;
+  gap: 20px;
+  border-radius: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image {
+  height: auto;
+  width: 350px;
+  background-color: white;
+  /* margin-left: 18px; */
+  border-bottom: 2px solid gray;
+  border-top: 2px solid gray;
+  border-right: 2px solid gray;
+  border-left: 2px solid gray;
+  border-radius: 20px;
+  border: 1px solid #e3d7d7;
+  box-shadow: 2px 2px 5px 0px #d3cbcb;
+  padding-bottom: 10px;
+}
+.main-image {
+  width: 100%;
+  height: 40vh;
+  overflow: hidden;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.add{
+  font-weight: 600;
+  color: white;
+}
+.fot{
+  color: white;
+  font-weight: 400;
+
+}
+.footer1 a{
+  color: white;
+  font-weight: 400;
+
+}
+.fotter {
+  margin-top: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  padding: 10px 14px;
+  background:rgba(0,0,0,0.7) url("./images/footer.jpg");
+  width: 100vw;
+  height: 300px;
+background-position: bottom;
+background-blend-mode:darken;
+
+}
+.fotter1{
+  margin-top: 20px;
+
+}
+.para{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.fotter a {
+  color: black;
+  text-decoration: none;
+}
+@media only screen and (max-width: 720px) {
+  .fotter {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-direction: column;
+    padding: 10px 14px;
+  }
+}
+/* Your existing CSS */
+
+/* ... Your existing styles ... */
+
+/* Animation for the 'WHAT WE DO' section */
+.main-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation for the 'Our Services' section */
+.image-box {
+  display: flex;
+  gap: 20px;
+  border-radius: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  animation: scaleIn 1s ease-in-out;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animation for the 'Gallery' section */
+.gallery-item {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animation for the 'Testimonials' section */
+
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ... Your existing styles ... */
+
+
