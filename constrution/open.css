@@ -96,10 +96,15 @@ body {
     font-size: 35px;    
 }
 .right{
-   
-    width: 40%;
+    width: 28vw;
     /* // height: 700px; */
     padding: 20px;
+    float:right;
+    position: fixed;
+    top: 10;
+    right: 0;
+  
+
     
 }
 .sign{
@@ -202,6 +207,7 @@ body {
 
     .side-para{
         width: 100%;
+        line-height: 1.5rem;
     }
     .right{
        
