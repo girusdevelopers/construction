@@ -8,13 +8,18 @@ body {
   --color1: #fff;
   --color2: #181818;
 }
-.box-matter{
-  line-height: 1.5rem;
-}
-.box-side{
-  padding-left: 20px;
-}
 
+
+/* Header Section */
+
+.header-main{
+  top: 0;
+  position: sticky;
+  z-index: 999;
+  background-color: rgba(139, 121, 121, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #eee;
+}
 .nav-bar {
   width: 100%;
   display: flex;
@@ -22,23 +27,14 @@ body {
   align-items: center;
   list-style: none;
   position: relative;
-  background-color: var(--color2);
   padding: 12px 20px;
+  
 }
-.logo img {
-  width: 40px;
-}
-.side{
-  font-size: 20px;
-  padding-left: 20px;
-  padding-top: 20px;
-}
-.menu {
-  display: flex;
-}
-.menu li {
-  padding-left: 30px;
-}
+
+
+.logo img { width: 40px; }
+.menu { display: flex; }
+.menu li { padding-left: 30px; }
 .menu li a {
   display: inline-block;
   text-decoration: none;
@@ -48,6 +44,11 @@ body {
   position: relative;
   text-transform: uppercase;
 }
+
+.menu li :hover{
+   text-decoration: underline ;
+}
+
 .menu li a::after {
   content: "";
   position: absolute;
@@ -58,11 +59,9 @@ body {
   background-color: var(--color1);
   transition: 0.15s ease-in-out;
 }
-.menu li a:hover:after {
-  width: 100%;
-}
-.open-menu,
-.close-menu {
+
+.menu li a:hover::after { width: 100%; }
+.open-menu, .close-menu {
   position: absolute;
   color: var(--color1);
   cursor: pointer;
@@ -74,41 +73,172 @@ body {
   right: 20px;
   transform: translateY(-50%);
 }
+
 .close-menu {
   top: 20px;
   right: 20px;
 }
-#check {
+
+.check { 
+  display: none; 
+}
+
+.actions-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  
+
+  button {
+    border-radius: 10px;
+    color: black;
+    height: 24px;
+    background-color: #f1eaea;
+    font-size: 14px;
+    padding: 0px 20px;
+    font-weight: 600;
+    font-family: var(--font-inter);
+
+    &:nth-of-type(2) {
+      color: #fff;
+      background: var(--accent-color);
+
+      &:hover {
+        background: #f72585;
+      }
+    }
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+ 
+.nav-bar {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
   display: none;
 }
-@media (max-width: 610px) {
-  .menu {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    right: -100%;
-    z-index: 100;
-    background-color: var(--color2);
-    transition: all 0.2s ease-in-out;
-  }
+
+.check:checked + .menu {
+
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  color: white;
+  background: black;
+  width: 100%;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  padding-bottom: 20px;
+  transition: all 0.4s ease-in-out;
+}
+
+
   .menu li {
-    margin-top: 40px;
-  }
-  .menu li a {
+     margin-top: 20px;
+     }
+
+  .menu li a { 
     padding: 10px;
+   }
+
+   .menu li a:target {
+    display: none;
   }
-  .open-menu,
-  .close-menu {
+
+  .open-menu{
     display: block;
   }
-  #check:checked ~ .menu {
-    right: 0;
+
+  .close-menu {
+    display: none;
+   }
+
+
+   .actions-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    
+  
+    button {
+      border-radius: 10px;
+      color: black;
+      
+      background-color: #f1eaea;
+      font-size: 14px;
+      padding: 0px 20px;
+      font-weight: 600;
+      font-family: var(--font-inter);
+  
+      &:nth-of-type(2) {
+        color: #fff;
+        background: var(--accent-color);
+  
+        &:hover {
+          background: #f72585;
+        }
+      }
+  
+      &:hover {
+        opacity: 0.9;
+      }
+    }
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.box-matter{
+  line-height: 1.5rem;
+}
+.box-side{
+  padding-left: 20px;
+}
+
+
+
+.side{
+  font-size: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+
+
+
+
+
+
+
+
 .tittle {
   display: flex;
   justify-content: center;
