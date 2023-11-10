@@ -1,20 +1,13 @@
-* {
+*{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 body {
   font-family: "Poppins", sans-serif;
-  --color1: #fff;
-  --color2: #181818;
+  --color1: #FFF ;
+  --color2: #181818 ;
 }
-.box-matter{
-  line-height: 1.5rem;
-}
-.box-side{
-  padding-left: 20px;
-}
-
 .nav-bar {
   width: 100%;
   display: flex;
@@ -25,20 +18,9 @@ body {
   background-color: var(--color2);
   padding: 12px 20px;
 }
-.logo img {
-  width: 40px;
-}
-.side{
-  font-size: 20px;
-  padding-left: 20px;
-  padding-top: 20px;
-}
-.menu {
-  display: flex;
-}
-.menu li {
-  padding-left: 30px;
-}
+.logo img {width: 40px;}
+.menu {display: flex;}
+.menu li {padding-left: 30px;}
 .menu li a {
   display: inline-block;
   text-decoration: none;
@@ -58,11 +40,8 @@ body {
   background-color: var(--color1);
   transition: 0.15s ease-in-out;
 }
-.menu li a:hover:after {
-  width: 100%;
-}
-.open-menu,
-.close-menu {
+.menu li a:hover:after {width: 100%;}
+.open-menu , .close-menu {
   position: absolute;
   color: var(--color1);
   cursor: pointer;
@@ -78,37 +57,31 @@ body {
   top: 20px;
   right: 20px;
 }
-#check {
-  display: none;
-}
-@media (max-width: 610px) {
+#check {display: none;}
+@media(max-width: 610px){
   .menu {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    right: -100%;
-    z-index: 100;
-    background-color: var(--color2);
-    transition: all 0.2s ease-in-out;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      z-index: 100;
+      background-color: var(--color2);
+      transition: all 0.2s ease-in-out;
   }
-  .menu li {
-    margin-top: 40px;
-  }
-  .menu li a {
-    padding: 10px;
-  }
-  .open-menu,
-  .close-menu {
-    display: block;
-  }
-  #check:checked ~ .menu {
-    right: 0;
-  }
+  .menu li {margin-top: 40px;}
+  .menu li a {padding: 10px;}
+  .open-menu , .close-menu {display: block;}
+  #check:checked ~ .menu {right: 0;}
 }
+
+
+
+
+
 .tittle {
   display: flex;
   justify-content: center;
@@ -119,6 +92,7 @@ body {
 }
 .main-box {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 30px;
