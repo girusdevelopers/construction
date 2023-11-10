@@ -165,63 +165,8 @@ body {
   margin-top: -20px;
 
 }
-.fot{
-  color: white;
-  font-weight: 400;
-
-}
-.foo{
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.fotter1{
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.fotter1 a{
-  text-decoration: none;
-}
-
-.fotter {
-  margin-top: 100px;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  gap: 30px;
-  padding: 10px 14px;
-  background:rgba(0,0,0,0.7) url("./images/footer.jpg");
-  width: 100vw;
-  height: 300px;
-background-position: bottom;
-background-blend-mode:darken;
-
-}
-.add{
-  color: white;
-  font-weight: 600;
-}
-.fotter1{
-  padding-top: 20px;
-
-}
-@media only screen and (max-width:720px){
-
-  .fotter {
-
-    margin-top: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-direction: column;
-    padding: 10px 14px;
-  }
 
 
-}
 
 
 /* .main-card{
