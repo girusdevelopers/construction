@@ -8,6 +8,21 @@ body {
   --color1: #FFF ;
   --color2: #181818 ;
 }
+<<<<<<< HEAD
+=======
+
+
+/* Header Section */
+
+.header-main{
+  top: 0;
+  position: sticky;
+  z-index: 999;
+  background-color: rgba(139, 121, 121, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #eee;
+}
+>>>>>>> 80e0af495a7f505c6f4447ab9d8d44d0705c10d1
 .nav-bar {
   width: 100%;
   display: flex;
@@ -15,12 +30,20 @@ body {
   align-items: center;
   list-style: none;
   position: relative;
-  background-color: var(--color2);
   padding: 12px 20px;
+  
 }
+<<<<<<< HEAD
 .logo img {width: 40px;}
 .menu {display: flex;}
 .menu li {padding-left: 30px;}
+=======
+
+
+.logo img { width: 40px; }
+.menu { display: flex; }
+.menu li { padding-left: 30px; }
+>>>>>>> 80e0af495a7f505c6f4447ab9d8d44d0705c10d1
 .menu li a {
   display: inline-block;
   text-decoration: none;
@@ -30,6 +53,11 @@ body {
   position: relative;
   text-transform: uppercase;
 }
+
+.menu li :hover{
+   text-decoration: underline ;
+}
+
 .menu li a::after {
   content: "";
   position: absolute;
@@ -40,8 +68,14 @@ body {
   background-color: var(--color1);
   transition: 0.15s ease-in-out;
 }
+<<<<<<< HEAD
 .menu li a:hover:after {width: 100%;}
 .open-menu , .close-menu {
+=======
+
+.menu li a:hover::after { width: 100%; }
+.open-menu, .close-menu {
+>>>>>>> 80e0af495a7f505c6f4447ab9d8d44d0705c10d1
   position: absolute;
   color: var(--color1);
   cursor: pointer;
@@ -53,10 +87,12 @@ body {
   right: 20px;
   transform: translateY(-50%);
 }
+
 .close-menu {
   top: 20px;
   right: 20px;
 }
+<<<<<<< HEAD
 #check {display: none;}
 @media(max-width: 610px){
   .menu {
@@ -71,6 +107,126 @@ body {
       z-index: 100;
       background-color: var(--color2);
       transition: all 0.2s ease-in-out;
+=======
+
+.check { 
+  display: none; 
+}
+
+.actions-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  
+
+  button {
+    border-radius: 10px;
+    color: black;
+    height: 24px;
+    background-color: #f1eaea;
+    font-size: 14px;
+    padding: 0px 20px;
+    font-weight: 600;
+    font-family: var(--font-inter);
+
+    &:nth-of-type(2) {
+      color: #fff;
+      background: var(--accent-color);
+
+      &:hover {
+        background: #f72585;
+      }
+    }
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+ 
+.nav-bar {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  display: none;
+}
+
+.check:checked + .menu {
+
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  color: white;
+  background: black;
+  width: 100%;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  padding-bottom: 20px;
+  transition: all 0.4s ease-in-out;
+}
+
+
+  .menu li {
+     margin-top: 20px;
+     }
+
+  .menu li a { 
+    padding: 10px;
+   }
+
+   .menu li a:target {
+    display: none;
+  }
+
+  .open-menu{
+    display: block;
+  }
+
+  .close-menu {
+    display: none;
+   }
+
+
+   .actions-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    
+  
+    button {
+      border-radius: 10px;
+      color: black;
+      
+      background-color: #f1eaea;
+      font-size: 14px;
+      padding: 0px 20px;
+      font-weight: 600;
+      font-family: var(--font-inter);
+  
+      &:nth-of-type(2) {
+        color: #fff;
+        background: var(--accent-color);
+  
+        &:hover {
+          background: #f72585;
+        }
+      }
+  
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+>>>>>>> 80e0af495a7f505c6f4447ab9d8d44d0705c10d1
   }
   .menu li {margin-top: 40px;}
   .menu li a {padding: 10px;}
@@ -82,6 +238,45 @@ body {
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+.box-matter{
+  line-height: 1.5rem;
+}
+.box-side{
+  padding-left: 20px;
+}
+
+
+
+.side{
+  font-size: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+>>>>>>> 80e0af495a7f505c6f4447ab9d8d44d0705c10d1
 .tittle {
   display: flex;
   justify-content: center;
